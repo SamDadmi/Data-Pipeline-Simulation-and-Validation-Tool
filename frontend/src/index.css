@@ -1,0 +1,182 @@
+/* index.css */
+
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Full Screen Setup */
+html, body {
+  height: 100%; /* Full height for HTML and body */
+  width: 100%; /* Full width for HTML and body */
+}
+
+/* Body Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #e94560; /* Bright text color for contrast */
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for content */
+.container {
+  width: 100%;
+  height: 100%; /* Full height for the container */
+  max-width: 1200px; /* Limit max width for large screens */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Code Block Styles */
+code {
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: #00adb5; /* Teal color for code */
+  transition: background 0.3s;
+}
+
+code:hover {
+  background: rgba(255, 255, 255, 0.3); /* Highlight on hover */
+}
+
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 15px; /* Reduced margin */
+  color: #00adb5; /* Teal color for headings */
+  text-shadow: 0 0 20px rgba(0, 173, 181, 0.9); /* Glowing effect */
+  font-size: 2rem; /* Adjusted size for better fit */
+}
+
+h1 {
+  font-size: 2.5rem; /* Larger size for the main title */
+}
+
+/* Link Styles */
+a {
+  color: #e94560; /* Bright color for links */
+  text-decoration: none;
+  position: relative; /* For underline effect */
+  font-size: 1rem;
+}
+
+a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #e94560; /* Color for underline */
+  transition: width 0.4s ease, background-color 0.4s ease; /* Smoother transition */
+}
+
+a:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+
+/* Button Styles */
+button {
+  background: linear-gradient(90deg, #00adb5, #e94560);
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  padding: 15px 20px;
+  font-size: 1rem; /* Slightly smaller button text */
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 173, 181, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  width: 100%; /* Full width for buttons */
+}
+
+button:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 173, 181, 0.7);
+  background: linear-gradient(90deg, #e94560, #00adb5); /* Reverse gradient on hover */
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+  color: #fff; /* White text */
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #e94560; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+  background: rgba(255, 255, 255, 0.2); /* Darker background on focus */
+}
+
+/* Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px 0; /* Reduced margin for space between cards */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Canvas Styles */
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block; /* Remove extra spacing from the canvas */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .container {
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 2rem; /* Slightly smaller on mobile */
+  }
+
+  button {
+    padding: 12px; /* Reduced padding for mobile */
+    font-size: 0.9rem; /* Consistent font size on mobile */
+  }
+
+  h2, h3 {
+    font-size: 1.5rem; /* Adjust font sizes for smaller screens */
+  }
+
+  h4, h5, h6 {
+    font-size: 1.2rem; /* Adjust font sizes for smaller screens */
+  }
+}
